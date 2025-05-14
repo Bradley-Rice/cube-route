@@ -5,10 +5,10 @@
         <h2 class="display-3 fw-normal">Pet Foodies</h2>
         <div class="mb-4 mb-md-0">
           <p class="m-0">
-            <button wire:click="allCatagories" value="all" class="filter-button me-4  active" data-filter="*">ALL</button>
-            <button wire:click="catTreatsCatagory" value="catTreats" class="filter-button me-4 " data-filter=".cat">CAT TREATS</button>
-            <button wire:click="dogFoodCatagory" value="dogFood" class="filter-button me-4 " data-filter=".dog">DOG FOOD</button>
-            <button wire:click="catToysCatagory" value="catToys" class="filter-button me-4 " data-filter=".bird">CAT TOYS</button>
+             <button wire:click="selectCatagory('all')" class="filter-button me-4  active" data-filter="*">ALL</button>
+             <button wire:click="selectCatagory('catTreats')" class="filter-button me-4 " data-filter=".cat">CAT TREATS</button>
+             <button wire:click="selectCatagory('dogFood')" class="filter-button me-4 " data-filter=".dog">DOG FOOD</button>
+             <button wire:click="selectCatagory('catToys')" class="filter-button me-4 " data-filter=".bird">CAT TOYS</button>
           </p>
         </div>
         <div>

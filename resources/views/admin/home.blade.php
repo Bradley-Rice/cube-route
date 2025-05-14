@@ -1,3 +1,1 @@
-<x-app-layout>
-
-</x-app-layout>
+<p>WORKING</p>

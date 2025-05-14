@@ -195,7 +195,7 @@
             <use xlink:href="#arrow-right"></use>
             </svg>
           </a> -->
-            <button wire:click='login' class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Login</button>
+            <button wire:click='login' class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1" data-bs-toggle="modal" data-bs-target="#testingModal">Login</button>
 
 
         </div>
@@ -433,7 +433,7 @@
       </div>
     </div>
   </section>
-
+  
   @livewire('login')
   @livewire('catagory')
   
