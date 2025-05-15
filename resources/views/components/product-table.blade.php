@@ -30,7 +30,7 @@
             <a href="single-product.html"><img src="home/images/item9.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
               <a href="single-product.html">
-                <h3 class="card-title pt-4 m-0">Grey hoodie</h3>
+                <h3 class="card-title pt-4 m-0">{{ $product->product_name }}PRODUCT NAME HERE</h3>
               </a>
 
               <div class="card-text">

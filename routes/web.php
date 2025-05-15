@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\productController;
 
 
 route::get('/', [HomeController::class,'index']);
@@ -18,3 +19,12 @@ Route::middleware([
 
 
 route::get('redirect', [HomeController::class,'redirect']);
+
+// Route::get('/viewProducts','productController@selCat');
+
+// route::get('/viewProducts', [HomeController::class,'selCat']);
+
+
+
+Route::get('/selectCategory', [HomeController::class,'selCat']);
+

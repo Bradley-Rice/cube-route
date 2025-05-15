@@ -413,19 +413,19 @@
     <div class="container my-3 py-5">
       <div class="row my-3">
         <div class="col text-center">
-          <a href="#" class="categories-item">
+          <a href="/selectCategory?selCat=635" class="categories-item">
             <iconify-icon class="category-icon" icon="ph:cat"></iconify-icon>
             <h5>Cat Treats</h5>
           </a>
         </div>
         <div class="col text-center">
-          <a href="#" class="categories-item">
+          <a href="/selectCategory?selCat=553" class="categories-item">
             <iconify-icon class="category-icon" icon="ph:dog"></iconify-icon>
             <h5>Dog Food</h5>
           </a>
         </div>
         <div class="col text-center">
-          <a href="#" class="categories-item">
+          <a href="/selectCategory?selCat=590" class="categories-item">
             <iconify-icon class="category-icon" icon="ph:cat"></iconify-icon>
             <h5>Cat Toys</h5>
           </a>
@@ -435,7 +435,7 @@
   </section>
   
   @livewire('login')
-  @livewire('catagory')
+  
   
   <section id="testimonial">
     <div class="container my-5 py-5">
