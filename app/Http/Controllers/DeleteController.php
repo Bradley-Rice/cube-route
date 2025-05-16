@@ -12,11 +12,14 @@ class DeleteController extends Controller
      */
     public function __invoke(Request $request)
     {
-        // return $request;
+        
 
         $name = $request['product'];
 
-        DB::table('Products')->WHERE('name','=',$name)->delete();
+
+        $delete = DB::update("DELETE FROM products WHERE `products`.`name`=$name");
+
+        // NOT WORKING PROPERLY
 
         return redirect('/');
 

@@ -66,7 +66,7 @@ class HomeController extends Controller
             case "590":
                 // SHOW ONLY CAT TREATS PRODUCTS
                 
-                $products = DB::select('SELECT products.id,products.name,products.slug, products.product_id,product_categories.category_id
+                $products = DB::select('SELECT products.name,products.slug, products.product_id,product_categories.category_id
                                                     FROM products
                                                     JOIN product_categories ON products.product_id=product_categories.product_id
                                                     WHERE product_categories.category_id = 590 ');
@@ -76,7 +76,7 @@ class HomeController extends Controller
             case "635":
                 // SHOW ONLY CAT TOYS PRODUCTS
                 
-                $products = DB::select('SELECT products.id,products.name,products.slug, products.product_id,product_categories.category_id
+                $products = DB::select('SELECT products.name,products.slug, products.product_id,product_categories.category_id
                                                 FROM products
                                                 JOIN product_categories ON products.product_id=product_categories.product_id
                                                 WHERE product_categories.category_id = 635 ');
@@ -86,7 +86,7 @@ class HomeController extends Controller
                 return view('livewire.catagory',['products'=>$products]);
 
             default:
-                $allProductsCategory = DB::select('SELECT products.id,products.name,products.slug, products.product_id,product_categories.category_id
+                $allProductsCategory = DB::select('SELECT products.name,products.slug, products.product_id,product_categories.category_id
                                                     FROM products
                                                     JOIN product_categories ON products.product_id=product_categories.product_id; ');
                 // return $allProductsCategory;

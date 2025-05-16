@@ -52,14 +52,6 @@ Route::get('createVariant',function(){
 
 });
 
-
-// Route::get('/productCreate',function(){
-
-//     return view();
-
-// });
-
-
 Route::post('logout',function(){
     Auth::guard('web')->logout();
 
@@ -70,12 +62,12 @@ Route::post('logout',function(){
 route::get('selectVarient', [HomeController::class,'selectVarient']);
 
 
-// route::get('productCreate', [ProductController::class])->name('product.create');
+
 Route::get('productCreate',ProductController::class)->name('product.create');
 
 Route::get('variantCreate',VariantController::class)->name('variant.create');
 
-// route::get('createVarient', [VariantController::class,'selectVarient'])->name('variant.create');
+
 
 
 route::get('/', [HomeController::class,'index']);

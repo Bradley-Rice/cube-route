@@ -25,7 +25,8 @@ class VariantController extends Controller
         $variantCat = ProductCategory::create($variantCat);
 
 
-        return "SUCCESS";
+        return redirect('/');
+        // return "SUCCESS";
 
 
     }

@@ -24,6 +24,7 @@ class ProductController extends Controller
         //     'name' => ['required', 'string'],
         // ]);
 
+        // FURTHER VALIDATION
 
         $product = array("name"=>$request['productName'],"slug"=>$request['slug'],"product_id"=>$request['product_id']);
 
@@ -32,13 +33,6 @@ class ProductController extends Controller
         $product = Products::create($product);
 
         return $product;
-
-        // return redirect('/');
-
-
-
-
-        
 
 
     }
