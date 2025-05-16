@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeleteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -107,3 +108,5 @@ Route::get('/test',function(){
 
 });
 
+
+Route::get('delete',DeleteController::class)->name('item.delete');

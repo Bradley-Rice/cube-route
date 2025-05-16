@@ -363,7 +363,7 @@
               <a href="single-product.html">
                 <h3 class="card-title pt-4 m-0">{{ $product->name }}</h3>
               </a>
-
+            <a href="/delete?product={{ $product->name }}" class="btn btn-danger">delete</a>
             </div>
           </div>
           @endforeach
