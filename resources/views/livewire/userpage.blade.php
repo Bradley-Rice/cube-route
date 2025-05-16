@@ -187,18 +187,23 @@
             </form>
           </div>
         </div>
-
+        @if (!Auth::guest())
         <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
-          <!-- <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+          <a href="/logout" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+            Log Out
+            <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+            <use xlink:href="#arrow-right"></use>
+            </svg>
+          </a>
+        @else
+        <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+          <a href="/login" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
             Login
             <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
             <use xlink:href="#arrow-right"></use>
             </svg>
-          </a> -->
-            <button wire:click='login' class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1" data-bs-toggle="modal" data-bs-target="#testingModal">Login</button>
-
-
-        </div>
+          </a>
+        @endif
       </div>
     </div>
 
@@ -434,7 +439,6 @@
     </div>
   </section>
   
-  @livewire('login')
   
   
   <section id="testimonial">

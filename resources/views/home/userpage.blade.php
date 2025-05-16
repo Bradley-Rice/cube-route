@@ -434,7 +434,7 @@
     </div>
   </section>
 
-  @livewire('login')
+
 
   
   <section id="testimonial">

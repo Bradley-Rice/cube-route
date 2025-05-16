@@ -12,7 +12,7 @@
             </div>
         @endsession
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login.attempt') }}">
             @csrf
 
             <div>
@@ -38,9 +38,11 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
+                <button type="submit" class="ms-4">
+                    Log In
+                </button>
                 <x-button class="ms-4">
-                    {{ __('Log in') }}
+                    <a href="register">Register</a>
                 </x-button>
             </div>
         </form>

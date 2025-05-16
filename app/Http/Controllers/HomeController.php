@@ -15,22 +15,33 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('livewire.userpage');
-    }
 
-    public function redirect()
-    {
-        $usertype=Auth::user()->usertype;
-
-        if($usertype=='1')
-        {
-            return view('admin.home');
+        if(session_status() === 2){
+            session_destroy();
         }
         else
         {
-            return view('dashboard');
+            session_start();
         }
+        
+        
+
+        return view('livewire.userpage');
     }
+
+    // public function redirect()
+    // {
+    //     $usertype=Auth::user()->usertype;
+
+    //     if($usertype=='1')
+    //     {
+    //         return view('admin.home');
+    //     }
+    //     else
+    //     {
+    //         return view('dashboard');
+    //     }
+    // }
 // $catNo
     public function selCat()
     {
@@ -67,7 +78,7 @@ class HomeController extends Controller
                                                 JOIN product_categories ON products.product_id=product_categories.product_id
                                                 WHERE product_categories.category_id = 635 ');
 
-                // return array($products);
+                // return $products;
                 
                 return view('livewire.catagory',['products'=>$products]);
 
@@ -78,6 +89,21 @@ class HomeController extends Controller
                 // return $allProductsCategory;
                 return view('livewire.userpage');
         }
+    }
+
+
+    public function selectVarient()
+    {
+
+        $products = DB::select('SELECT *
+                                FROM product_variants
+                                WHERE product_variants.product_id ='.$_GET["product_id"].'; ');
+
+        // return view('livewire.catagory',["products"=>$products,selCat='.$_GET['product_cat']."]);
+
+        $selCat = $_GET['selCat'];
+
+        return view('livewire.catagory',['products'=>$products],['selCat'=>$selCat]);
     }
 
 }

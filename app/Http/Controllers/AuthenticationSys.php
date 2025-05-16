@@ -4,27 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AuthenticationSys extends Controller
-{
-    // Function to log users into site.
+// class AuthenticationSys extends Controller
+// {
+//     // Function to log users into site.
 
-    function login()
-    {
+//     function login()
+//     {
 
-    }
+//     }
 
-    function loginWithPost(Request $request)
-    {
+//     function loginWithPost(Request $request)
+//     {
 
-    }
+//     }
 
-    function register()
-    {
+//     function register()
+//     {
 
-    }
+//     }
 
-    function registerPost(Request $request)
-    {
+//     function registerPost(Request $request)
+//     {
 
-    }
-}
+//     }
+// }
