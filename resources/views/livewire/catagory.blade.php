@@ -338,15 +338,21 @@
     </div>
   </header>
 
+
+
+   @endphp
     @if(isset($_GET['product_id']))
     <div class="container-fluid text-center">
-      <button class="btn btn-primary"><a href="">CREATE NEW VARIANT</a></button>
+      <button class="btn btn-primary"><a href="createVariant?selCat={{ $_GET['selCat'] }}&product_id={{ $products[0]->product_id }}">CREATE NEW VARIANT</a></button>
     </div>
     @else
+
     <div class="container-fluid text-center">
-      <button class="btn btn-primary"><a href="">CREATE NEW PRODUCT</a></button>
+      <button class="btn btn-primary"><a href="createProduct?selCat={{ $products[0]->category_id }}">CREATE NEW PRODUCT</a></button>
     </div>
     @endif
+
+    
 
   <section id="foodies" style="margin: 80px;"> <!--MARGIN HERE CAN/SHOULD BE BETTER -->
           <div class="isotope-container row">

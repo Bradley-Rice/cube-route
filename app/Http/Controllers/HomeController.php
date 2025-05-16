@@ -52,11 +52,14 @@ class HomeController extends Controller
         {
             case "553":
                 // return "DOG FOOD";
-                $products = DB::select('SELECT products.id,products.name,products.slug, products.product_id,product_categories.category_id
+                $products = DB::select('SELECT products.name,products.slug, products.product_id,product_categories.category_id
                                             FROM products
                                             JOIN product_categories
                                             ON products.product_id=product_categories.product_id
                                             WHERE product_categories.category_id = 553 ');
+
+                // return $products[0]->category_id;
+
 
                 return view('livewire.catagory',['products'=>$products]);
 

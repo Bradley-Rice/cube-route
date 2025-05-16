@@ -2,12 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use illuminate\support\facades\DB;
 
-class productController extends Controller
+
+class ProductController extends Controller
 {
-    function selCat()
+    /**
+     * Handle the incoming request.
+     */
+    public function __invoke(Request $request)
     {
-        return "HELLO";
+
+
+        // $product = $request->validate([
+
+        //     'name' => ['required', 'string'],
+        // ]);
+
+
+        $product = array("name"=>$request['productName'],"slug"=>$request['slug'],"product_id"=>$request['product_id']);
+
+        // return $product;
+
+        $product = Products::create($product);
+
+        return $product;
+
+        // return redirect('/');
+
+
+
+
+        
+
+
     }
 }

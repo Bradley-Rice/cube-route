@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogOutController;
+use App\Http\Controllers\productController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\VariantController;
 
 // use App\Http\Controllers\productController;
 
@@ -29,6 +31,34 @@ Route::get('logout',function(){
 
 });
 
+
+Route::get('createProduct',function(){
+    
+
+    
+
+    return view('livewire.createProduct');
+
+});
+
+
+Route::get('createVariant',function(){
+    
+
+    // return $_GET;
+
+    return view('livewire.createVariant');
+
+});
+
+
+// Route::get('/productCreate',function(){
+
+//     return view();
+
+// });
+
+
 Route::post('logout',function(){
     Auth::guard('web')->logout();
 
@@ -37,6 +67,14 @@ Route::post('logout',function(){
 });
 
 route::get('selectVarient', [HomeController::class,'selectVarient']);
+
+
+// route::get('productCreate', [ProductController::class])->name('product.create');
+Route::get('productCreate',ProductController::class)->name('product.create');
+
+Route::get('variantCreate',VariantController::class)->name('variant.create');
+
+// route::get('createVarient', [VariantController::class,'selectVarient'])->name('variant.create');
 
 
 route::get('/', [HomeController::class,'index']);

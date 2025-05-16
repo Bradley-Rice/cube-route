@@ -35,12 +35,20 @@ class RegisterController extends Controller
 
             $user = User::create($userData);
 
+            $_SESSION['admin'] = true;
+
+            Auth::login($user);
+
         }
         else
         {
             $userData['password'] = bcrypt($userData['password']);
     
             $user = User::create($userData);
+
+            $_SESSION['admin'] = false;
+
+            Auth::login($user);
         }
         
 
